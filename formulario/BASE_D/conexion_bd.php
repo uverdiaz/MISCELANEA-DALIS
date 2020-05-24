@@ -1,12 +1,14 @@
 <?php
-  $config = require("../../compartido/config.php");
+  $CONFIG = require("../../compartido/config.php");
   class conexion
   {
       public static function con()
       {
+          
           try
           {
-              $conexion=mysqli_connect($config->db_server,$config->bd_user,$config->db_password,$config->db_name);//servidor,usuario,clave,nom_bd
+              global $CONFIG;
+              $conexion=mysqli_connect($CONFIG->db_server,$CONFIG->bd_user,$CONFIG->db_password,$CONFIG->db_name);//servidor,usuario,clave,nom_bd
               return $conexion;
           }//fin try
           catch(Exception $e)
