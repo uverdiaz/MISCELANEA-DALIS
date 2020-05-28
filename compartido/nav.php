@@ -14,13 +14,10 @@
         <a class="nav-link" href="<?php echo $config->root_folder ?>/papeleria.php">Papeleria</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo $config->root_folder ?>/copisteria.php">copisteria</a>
+        <a class="nav-link" href="<?php echo $config->root_folder ?>/contacto.php">Contacto</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo $config->root_folder ?>/contacto.php">contacto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo $config->root_folder ?>/pedido.php">pedido</a>
+        <a class="nav-link" href="<?php echo $config->root_folder ?>/pedido.php">Pedido</a>
       </li>
     </ul>
   </div>
