@@ -14,7 +14,7 @@ body{
     overflow: hidden;
 }
 .titulo{
-    color: #642a73;
+    color: #782b8b;
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
@@ -25,8 +25,8 @@ header{
     width: 100%;
     height: 600px;
     background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e5075, #bdc3c773), url(../img/portada_dos.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e5059, #bdc3c73d),url(../img/portada_dos.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #2c3e5075, #bdc3c773), url(../img/pape1.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e5059, #bdc3c73d),url(../img/pape1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     background-size: cover;
     background-attachment: fixed;
@@ -64,13 +64,13 @@ header .textos-header{
 }
 .textos-header h1{
     font-size: 50px;
-    color: #ccc;
+    color: rgb(85, 73, 73);
 
 }
 .textos-header h2{
     font-size: 30px;
     font-weight: 300;
-    color:#ccc;   
+    color:rgb(85, 73, 73);   
 }
 .wave{
     position: absolute;
@@ -92,6 +92,17 @@ header .textos-header{
     margin: auto;
     background: rgba(0, 0, 0, .5);
     padding: 50px 20px 50px 20px ;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+
+
+}
+#for{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, .5);
+    padding: 10px 20px 30px 20px ;
     box-sizing: border-box;
     margin-top: 20px;
     border-radius: 7px;
@@ -141,14 +152,24 @@ input {
 }
 /************************** TABLAS ******************************/
 #cotenedor-t{
-    margin: 130px auto;
+    margin: auto;
     width: 500px;
 }
-table{
+.tabla{
     background-color: white;
-    text-align: left;
+    text-align: center;
     border-collapse: collapse;
-    width: 100%;
+    width: 500px;
+    margin: auto;
+    
+
+}
+.table{
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    width: 430px;
+    margin: auto;
     
 
 }
@@ -190,9 +211,9 @@ tr:hover td{
     margin-bottom: 15px;
 }
 .contenido-textos h3 span{
-    background: #e0840b;
+    background: #2044a5;
     color: #fff;
-    border-radius: 50%;
+    border-radius: 60%;
     display: inline-block;
     text-align: center;
     width: 30px;
@@ -324,6 +345,7 @@ footer{
     margin: 20px 0 0 0;
     color: #9e9797;
 }
+
 /*Adaptabilidad a movil*/
 
 @media screen and (max-width:900px){

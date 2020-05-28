@@ -105,6 +105,23 @@
           $this->mostrar=array();
       }
       /* */
+    //   public function mostrar_inven()
+    //   {
+    //       /*crear la conexion*/
+    //         /*instanciar la clase conexion*/
+    //         $llamar= new conexion();
+    //         $llamar1= $llamar->con();
+
+        
+    //       /*generar la consulta */
+    //       $consulta="select * from INVENTARIO";
+    //       /*procesar consulta */
+    //       $res=mysqli_query($llamar1,$consulta);
+
+    //       /*retornar una respuesta */
+    //       return mysqli_fetch_all($res,MYSQLI_ASSOC);
+    //   }//fin reporte_gral
+
       public function mostrar_inven()
       {
           /*crear la conexion*/
@@ -114,7 +131,7 @@
 
         
           /*generar la consulta */
-          $consulta="select * from INVENTARIO";
+          $consulta="select INV.PKCOD_PRO, INV.NOM_PROD, INV.NUM_PRO, INV.PRE_UNI, PED.NUM_PRO\n" . "     FROM INVENTARIO AS INV, PEDIDOS AS PED \n". "      WHERE INV.FKCOD_PED = PED.PKCOD_PED";
           /*procesar consulta */
           $res=mysqli_query($llamar1,$consulta);
 
@@ -122,6 +139,8 @@
           return mysqli_fetch_all($res,MYSQLI_ASSOC);
       }//fin reporte_gral
 
+
+      
   }//fin clase curso
 
 ?>  

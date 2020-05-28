@@ -78,6 +78,23 @@
           $this->mostrar=array();
       }
       /* */
+    //   public function mostrar_clien()
+    //   {
+    //       /*crear la conexion*/
+    //         /*instanciar la clase conexion*/
+    //         $llamar= new conexion();
+    //         $llamar1= $llamar->con();
+
+        
+    //       /*generar la consulta */
+    //       $consulta="select * from CLIENTE";
+    //       /*procesar consulta */
+    //       $res=mysqli_query($llamar1,$consulta);
+
+    //       /*retornar una respuesta */
+    //       return mysqli_fetch_all($res,MYSQLI_ASSOC);
+    //   }//fin reporte_gral
+
       public function mostrar_clien()
       {
           /*crear la conexion*/
@@ -87,7 +104,7 @@
 
         
           /*generar la consulta */
-          $consulta="select * from CLIENTE";
+          $consulta="select CLI.PKIDEN_CLI, CLI.NOM_CLI, INV.NOM_PROD \n". "FROM CLIENTE AS CLI, INVENTARIO AS INV\n". "\n" . "        WHERE CLI.FKCOD_PROD = INV.PKCOD_PRO";
           /*procesar consulta */
           $res=mysqli_query($llamar1,$consulta);
 
