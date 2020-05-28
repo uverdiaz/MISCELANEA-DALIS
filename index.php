@@ -21,9 +21,9 @@
             <img src="img/1.jpg" alt=""class="imagen-about-us">
             <div class="contenido-textos">
                 <h3><span>1</span>Los mejores productos</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tenetur magni. Maxime debitis doloremque voluptas veniam aliquam sequi, repellat quam molestiae accusantium tenetur enim? Debitis natus tenetur aut tempore neque?</p>
-                <h3><span>2</span>los mejores productos</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tenetur magni. Maxime debitis doloremque voluptas veniam aliquam sequi, repellat quam molestiae accusantium tenetur enim? Debitis natus tenetur aut tempore neque?</p>
+                <p>Cuando nos necesites podremos ofrecerte lo que desees, y te podremos ofrecer productos de gran calidad.</p>
+                <h3><span>2</span>Novedad</h3>
+                <p>Por cuarentena solo estamos abriendo de lunes a viernes de 9:00am a 2:00pm, para que vengas y podamos ofrecerte lo que necesites. </p>
 
             </div>
 
@@ -35,59 +35,59 @@
                 <div class="galeria-port">
                     <div class="imagen-port">
 
-                        <img src="img/2.jpg" alt="">
+                        <img src="img/in1.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Reglas</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/3.jpg" alt="">
+                        <img src="img/in2.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Libretas</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/4.jpg" alt="">
+                        <img src="img/inv3.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Carpetas</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/5.jpg" alt="">
+                        <img src="img/inv4.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Resmas</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/6.jpg" alt="">
+                        <img src="img/inv5.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Fomis</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/7.jpg" alt="">
+                        <img src="img/inv6.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Colores</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/8.jpg" alt="">
+                        <img src="img/inv7.png" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Marcadores</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/9.jpg" alt="">
+                        <img src="img/inve8.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/click.jpg" alt="">
-                            <p>Nuestro Producto</p>
+                            <p>Lapiceros</p>
                         </div>
                     </div>
                 
@@ -102,21 +102,21 @@
                 <h2 class="titulo">Lo que podemos ofrecerte</h2>
                 <div class="servicio-cout">
                     <div class="servicio-ind">
-                        <img src="img/12.jpg" alt="">
-                        <h3>Name</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolore.</p>
+                        <img src="img/ofre1.jpg" alt="">
+                        <h3>Papeleria</h3>
+                        <p>Una gran variedad de productos, que podras adquirir en nuestro establecimiento.</p>
                          
                     </div>
                     <div class="servicio-ind">
-                        <img src="img/13.jpg" alt="">
-                        <h3>Name</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolore.</p>
+                        <img src="img/ofre2.jpg" alt="">
+                        <h3>Servicio de Copisteria</h3>
+                        <p>Fotocopias e impresiones en B/N y COLOR - Impresiones digitales y demas.</p>
                          
                     </div>
                     <div class="servicio-ind">
-                        <img src="img/14.jpg" alt="">
-                        <h3>Name</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolore.</p>
+                        <img src="img/ofre3.jpg" alt="">
+                        <h3>Llamadas y Recargas</h3>
+                        <p>Llamadas locales y a movil, y recargas a todos los operadores deseados.</p>
                          
                     </div>
                 </div>
@@ -128,23 +128,7 @@
 
 
     </main>
-    <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>phone</h4>
-                <p>310 6282554</p>
-            </div>
-            <div class="content-foo">
-                <h4>email</h4>
-                <p>dalis_je@hotmail.com</p>
-            </div>
-            <div class="content-foo">
-                <h4>location</h4>
-                <p></p>
-            </div>
-        </div>
-        <h2 class="titulo-final">&copy; uver desing | uver diaz </h2>
-    </footer>
+    <?php require_once("compartido/footer.php")?>
 
 
     

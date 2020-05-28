@@ -9,7 +9,7 @@
         <?php include("../../compartido/nav.php")?>
     
     <section class="textos-header">
-        <h1>Obten la reservación de tus productos</h1>
+        <h1>Siempre al lado tuyo</h1>
         <h2>Variedades Dalis J.E</h2>
     </section>
     <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-19.74,64.63 C150.67,154.44 378.10,-52.78 520.87,52.78 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
@@ -38,9 +38,9 @@
         <div id="cotenedor-t">
         <center>
             <h2>TABLA CLIENTE</h2>
-            <br><br>
+            <br>
          
-                <table>
+                <table class="tabla">
                    <thead>
                     <tr>
                     <th>IDENTIFICACION</th>
@@ -60,7 +60,7 @@
                     ?>
                         <td><?php echo $key['PKIDEN_CLI'];?></td>
                         <td><?php echo $key['NOM_CLI'];?></td>
-                        <td><?php echo $key['FKCOD_PROD'];?></td>
+                        <td><?php echo $key['NOM_PROD'];?></td>
 
                     </tr>
                     <?php
@@ -72,23 +72,7 @@
          </div>
          <br><br> 
          
-         <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>phone</h4>
-                <p>310 6282554</p>
-            </div>
-            <div class="content-foo">
-                <h4>email</h4>
-                <p>dalis_je@hotmail.com</p>
-            </div>
-            <div class="content-foo">
-                <h4>location</h4>
-                <p></p>
-            </div>
-        </div>
-        <h2 class="titulo-final">&copy; uver desing | uver diaz </h2>
-    </footer>
+         <?php require_once("../../compartido/footer.php")?>
 
     
 </body>

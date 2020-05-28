@@ -16,7 +16,7 @@
     </header>
     <section class="content-form"> 
             <br><br>   
-        <form action="../CONTROLADOR/control_inv.php" method="POST">
+        <form id="for" action="../CONTROLADOR/control_inv.php" method="POST">
         <h2 class="h22">AGREGAR PRODUCTO</h2>
             
             <input type="number" name="tx_cod" placeholder="CODIGO">
@@ -51,9 +51,11 @@
           <center>
             
             <h2>INVENTARIO</h2>
-            <br><br>
-         
-                <table>
+            <br>
+            
+             
+                <table class="table">
+                   
                     <thead>
 
                     <tr>
@@ -78,35 +80,20 @@
                         <td><?php echo $key['NOM_PROD'];?></td>
                         <td><?php echo $key['NUM_PRO'];?></td>
                         <td><?php echo $key['PRE_UNI'];?></td>
-                        <td><?php echo $key['FKCOD_PED'];?></td>
+                        <td><?php echo $key['NUM_PRO'];?></td>
 
                     </tr>
                     <?php
                             }//cierre foreach  
                     ?>
-
+                  
                 </table>
-             </center> 
+             
+                </center>
          </div>
          <br><br> 
          
-         <footer>
-        <div class="contenedor-footer">
-            <div class="content-foo">
-                <h4>phone</h4>
-                <p>310 6282554</p>
-            </div>
-            <div class="content-foo">
-                <h4>email</h4>
-                <p>dalis_je@hotmail.com</p>
-            </div>
-            <div class="content-foo">
-                <h4>location</h4>
-                <p></p>
-            </div>
-        </div>
-        <h2 class="titulo-final">&copy; uver desing | uver diaz </h2>
-    </footer>
+         <?php require_once("../../compartido/footer.php")?>
 
     
 </body>
