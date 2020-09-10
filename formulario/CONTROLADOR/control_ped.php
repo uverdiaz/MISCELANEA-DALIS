@@ -1,18 +1,19 @@
 <?php
    /*LLAMAR LOGICA*/
-   include ("../logica/clase_inven.php"); 
+   include ("../logica/clase_pedido.php"); 
   /* validar evento boton*/
-  if(isset($_POST['sub_inv'])) 
+  if(isset($_POST['sub_ped'])) 
       {
           /*invocar reporte curso*/
-          $reporte= new mostrar_inv();
+          $reporte= new mostrar_ped();
+
           /*llamar funcion*/
           $combo1=$reporte->reporte_combo_emp();
           $combo=$reporte->reporte_combo_pro();
-          $res=$reporte->mostrar_inven(); 
+          $res=$reporte->mostrar_pedi(); 
           /*donde mostrar la respuesta*/
           /*echo"hola";*/
-          include("../VISTA/EMPLEADO/frm_inventario.php");
+          include("../VISTA/PEDIDOS/frm_pedido.php");
 
         
           
@@ -22,27 +23,26 @@
  if(isset($_POST['sub_registrar'])) 
       {
           /*recibir parametros pasar a variables*/
-            $pkcod_pro=$_POST['tx_cod'];
-            $nom_pro=$_POST['tx_nom'];
-            $des=$_POST['des'];
-            $num_pro=$_POST['num_pro'];
-            $pre_uni=$_POST['precio_e'];
-            $pre_s=$_POST['precio_s'];
-            $com_pro=$_POST['com_pro'];
-            $com_emp=$_POST['com_emp'];
-            
+          $cod=$_POST['tx_cod'];    
+          $date=$_POST['date'];
+          $nom=$_POST['nom'];
+          $des=$_POST['des'];
+          $num=$_POST['num'];
+          $precio=$_POST['pre'];
+          $com_pro=$_POST['com_pro'];
+          $com_emp=$_POST['com_emp'];
           /*ENVIAR DATOS para ser ingresado*/
-          $insertar= new INVENTARIO($pkcod_pro,$nom_pro,$des,$num_pro,$pre_uni,$pre_s,$com_pro,$com_emp);
-          $res_inser=$insertar->insert_inv();
+          $insertar= new PEDIDO($cod,$date,$nom,$des,$num,$precio,$com_pro,$com_emp);
+          $res_inser=$insertar->insert_ped();
           /*validar respuesta  */
           if($res_inser==1)
           {
-            $reporte= new mostrar_inv();
+            $reporte= new mostrar_ped();
             /*llamar funcion*/
             $combo1=$reporte->reporte_combo_emp();
-          $combo=$reporte->reporte_combo_pro();
-            $res=$reporte->mostrar_inven();
-            include("../VISTA/EMPLEADO/frm_inventario.php"); 
+            $combo=$reporte->reporte_combo_pro();
+            $res=$reporte->mostrar_pedi();
+            include("../VISTA/PEDIDOS/frm_pedido.php"); 
 
 
           }//fin if 
@@ -54,6 +54,7 @@
           
       }//fin boton registrar
 
+
       /** metodo para paso de informacion opcion modificar*/
  
  if(isset($_GET['cod_act']))
@@ -61,49 +62,46 @@
      /*pasar informacion de caja de texto a variable*/
      $act=$_GET['cod_act'];
      /*instanciar clase log_curso */
-     
-     $reporte= new mostrar_inv();
+     $reporte= new mostrar_ped();
      /*llamar el metodo especifico */
      $combo1=$reporte->reporte_combo_emp();
-          $combo=$reporte->reporte_combo_pro();
+     $combo=$reporte->reporte_combo_pro();
      $res=$reporte->reporte_codigo($act);
      /*mostrar en el formulario especifico al proceso que se este realizando modificar*/
-     include("../VISTA/EMPLEADO/frm_actualizar_inv.php");
+     include("../VISTA/PEDIDOS/frm_pedido_act.php");
 
 
  }//fin modificar
-
-
 
  /*validar pulsacion subactualizar */
  if(isset($_POST['sub_actualizar']))
  {
      /*recibir lo parametros del formulario */
-     $pkcod_pro=$_POST['tx_cod'];
-     $nom_pro=$_POST['tx_nom'];
+     $cod=$_POST['tx_cod'];    
+     $date=$_POST['date'];
+     $nom=$_POST['nom'];
      $des=$_POST['des'];
-     $num_pro=$_POST['num_pro'];
-     $pre_uni=$_POST['precio_e'];
-     $pre_s=$_POST['precio_s'];
+     $num=$_POST['num'];
+     $precio=$_POST['pre'];
      $com_pro=$_POST['com_pro'];
      $com_emp=$_POST['com_emp'];
 
 
      /*enviar datos para ser procesados */
-     $actualizar= new INVENTARIO($pkcod_pro,$nom_pro,$des,$num_pro,$pre_uni,$pre_s,$com_pro,$com_emp);
-     $res_modi=$actualizar->modificar_inv();
+     $actualizar= new PEDIDO($cod,$date,$nom,$des,$num,$precio,$com_pro,$com_emp);
+     $res_modi=$actualizar->modificar_ped();
 
      /*validar respuesta */
      if($res_modi==1)
      {
-        $reporte= new mostrar_inv();
+        $reporte= new mostrar_ped();
         /*llamar funcion*/
         $combo1=$reporte->reporte_combo_emp();
-          $combo=$reporte->reporte_combo_pro();
-        $res=$reporte->mostrar_inven(); 
+        $combo=$reporte->reporte_combo_pro();
+        $res=$reporte->mostrar_pedi(); 
         /*donde mostrar la respuesta*/
         /*echo"hola";*/
-        include("../VISTA/EMPLEADO/frm_inventario.php");
+        include("../VISTA/PEDIDOS/frm_pedido.php");
 
      }
 
@@ -117,26 +115,25 @@
 
  }//fin validacion sub_actualizar
 
-
  if(isset($_GET['cod_eli']))
  {
      /*pasar informacion de caja de texto a variable*/
      $eli=$_GET['cod_eli'];
      /*instanciar clase log_curso */
-     $reporte= new INVENTARIO($eli,null,null,null,null,null,null,null);
+     $reporte= new PEDIDO($eli,null,null,null,null,null,null,null);
      /*llamar el metodo especifico */
-     $res_eli=$reporte->eliminar_inv();
+     $res_eli=$reporte->eliminar_emp();
      /*validar respuesta */
      if($res_eli==1)
      {
-        $reporte= new mostrar_inv();
+        $reporte= new mostrar_ped();
         /*llamar funcion*/
         $combo1=$reporte->reporte_combo_emp();
-          $combo=$reporte->reporte_combo_pro();
-        $res=$reporte->mostrar_inven(); 
+        $combo=$reporte->reporte_combo_pro();
+        $res=$reporte->mostrar_pedi(); 
         /*donde mostrar la respuesta*/
         /*echo"hola";*/
-        include("../VISTA/EMPLEADO/frm_inventario.php");
+        include("../VISTA/PEDIDOS/frm_pedido.php");
 
      }
 
@@ -148,6 +145,13 @@
 
      }
      /*mostrar en el formulario especifico al proceso que se este realizando modificar*/
+     
+
 
  }//fin ELIMINAR
+
+
+
+
+
 ?>

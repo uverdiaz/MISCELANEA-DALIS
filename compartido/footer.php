@@ -11,7 +11,7 @@
             </div>
             <div class="content-foo">
                 <h4>Location</h4>
-                <p></p>
+                <p>Cra 3 No° 26-32</p>
             </div>
         </div>
         <h2 class="titulo-final">&copy; 2020 DesarrolloDiaz.com | DALIS J.E </h2>

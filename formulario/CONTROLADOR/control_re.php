@@ -1,22 +1,18 @@
 <?php
    /*LLAMAR LOGICA*/
-   include ("../logica/clase_cliente.php"); 
+   include ("../logica/clase_recibos.php"); 
   /* validar evento boton*/
-  if(isset($_POST['sub_cli'])) 
+  if(isset($_POST['sub_rec'])) 
       {
           /*invocar reporte curso*/
-          $reporte= new mostrar_cli();
-
-          $combo1=$reporte->reporte_combo_mes();
-
-          $combo=$reporte->reporte_combo_emp();
-
-          
-          /*llamar funcion*/
-          $res=$reporte->mostrar_clien(); 
+           $reporte= new mostrar_re();
+        //   /*llamar funcion*/
+           $combo1=$reporte->reporte_combo_mes();
+           $combo=$reporte->reporte_combo_emp();
+           $res=$reporte->mostrar_reci(); 
           /*donde mostrar la respuesta*/
-          /*echo"hola";*/
-          include("../VISTA/CLIENTE/frm_cliente.php");
+        //   /*echo"hola";*/
+          include("../VISTA/RECIBOS/frm_recibos.php");
 
         
           
@@ -26,26 +22,26 @@
  if(isset($_POST['sub_registrar'])) 
       {
           /*recibir parametros pasar a variables*/
-          $iden_cli=$_POST['tx_iden'];
-          $nom_cli=$_POST['tx_nom'];
+          $cod=$_POST['tx_cod'];
           $mes=$_POST['com_mes'];
-          $fecha_i=$_POST['FECHA_I'];
-          $fecha_f=$_POST['FECHA_FI'];  
-          $cod_pro=$_POST['num_ped'];
-          $empleado=$_POST['com_emp'];
+          $luz=$_POST['luz'];
+          $agua=$_POST['agua'];
+          $fecha_i=$_POST['fecha_i'];
+          $fecha_f=$_POST['fecha_f'];
+          $iden=$_POST['com_emp'];
+          
           /*ENVIAR DATOS para ser ingresado*/
-          $insertar= new CLIENTE($iden_cli,$nom_cli,$mes,$fecha_i,$fecha_f,$cod_pro,$empleado);
-          $res_inser=$insertar->insert_cli();
+          $insertar= new RECIBOS($cod,$mes,$luz,$agua,$fecha_i,$fecha_f,$iden);
+          $res_inser=$insertar->insert_re();
           /*validar respuesta  */
           if($res_inser==1)
           {
-            $reporte= new mostrar_cli();
-            $combo1=$reporte->reporte_combo_mes();
-
-            $combo=$reporte->reporte_combo_emp();
+            $reporte= new mostrar_re();
             /*llamar funcion*/
-            $res=$reporte->mostrar_clien();
-            include("../VISTA/CLIENTE/frm_cliente.php"); 
+            $combo1=$reporte->reporte_combo_mes();
+            $combo=$reporte->reporte_combo_emp();
+            $res=$reporte->mostrar_reci();
+            include("../VISTA/RECIBOS/frm_recibos.php"); 
 
 
           }//fin if 
@@ -65,15 +61,13 @@
      /*pasar informacion de caja de texto a variable*/
      $act=$_GET['cod_act'];
      /*instanciar clase log_curso */
-     $reporte= new mostrar_cli();
-
+     $reporte= new mostrar_re();
      $combo1=$reporte->reporte_combo_mes();
-
      $combo=$reporte->reporte_combo_emp();
      /*llamar el metodo especifico */
      $res=$reporte->reporte_codigo($act);
      /*mostrar en el formulario especifico al proceso que se este realizando modificar*/
-     include("../VISTA/CLIENTE/frm_actualizar_cli.php");
+     include("../VISTA/RECIBOS/frm_recibos_act.php");
 
 
  }//fin modificar
@@ -82,34 +76,30 @@
  if(isset($_POST['sub_actualizar']))
  {
      /*recibir lo parametros del formulario */
-     $iden_cli=$_POST['tx_iden'];
-     $nom_cli=$_POST['tx_nom'];
+     $cod=$_POST['tx_cod'];
      $mes=$_POST['com_mes'];
-     $fecha_i=$_POST['FECHA_I'];
-     $fecha_f=$_POST['FECHA_FI'];
-       
-     $cod_pro=$_POST['num_ped'];
-
-     $empleado=$_POST['com_emp'];
+     $luz=$_POST['luz'];
+     $agua=$_POST['agua'];
+     $fecha_i=$_POST['fecha_i'];
+     $fecha_f=$_POST['fecha_f'];
+     $iden=$_POST['com_emp'];
 
 
      /*enviar datos para ser procesados */
-     $actualizar= new CLIENTE($iden_cli,$nom_cli,$mes,$fecha_i,$fecha_f,$cod_pro,$empleado);
-     $res_modi=$actualizar->modificar_cli();
+     $actualizar= new RECIBOS($cod,$mes,$luz,$agua,$fecha_i,$fecha_f,$iden);
+     $res_modi=$actualizar->modificar_re();
 
      /*validar respuesta */
      if($res_modi==1)
      {
-        $reporte= new mostrar_cli();
+        $reporte= new mostrar_re();
         /*llamar funcion*/
         $combo1=$reporte->reporte_combo_mes();
-
         $combo=$reporte->reporte_combo_emp();
-        
-        $res=$reporte->mostrar_clien(); 
+        $res=$reporte->mostrar_reci(); 
         /*donde mostrar la respuesta*/
         /*echo"hola";*/
-        include("../VISTA/CLIENTE/frm_cliente.php");
+        include("../VISTA/RECIBOS/frm_recibos.php");
 
      }
 
@@ -128,22 +118,20 @@
      /*pasar informacion de caja de texto a variable*/
      $eli=$_GET['cod_eli'];
      /*instanciar clase log_curso */
-     $reporte= new CLIENTE($eli,null,null,null,null,null,null);
+     $reporte= new RECIBOS($eli,null,null,null,null,null,null);
      /*llamar el metodo especifico */
-     $res_eli=$reporte->eliminar_cli();
+     $res_eli=$reporte->eliminar_re();
      /*validar respuesta */
      if($res_eli==1)
      {
-        $reporte= new mostrar_cli();
-
-        $combo1=$reporte->reporte_combo_mes();
-
-        $combo=$reporte->reporte_combo_emp();
+        $reporte= new mostrar_re();
         /*llamar funcion*/
-        $res=$reporte->mostrar_clien(); 
+        $res=$reporte->mostrar_reci(); 
+        $combo1=$reporte->reporte_combo_mes();
+        $combo=$reporte->reporte_combo_emp();
         /*donde mostrar la respuesta*/
         /*echo"hola";*/
-        include("../VISTA/CLIENTE/frm_cliente.php");
+        include("../VISTA/RECIBOS/frm_recibos.php");
 
      }
 
