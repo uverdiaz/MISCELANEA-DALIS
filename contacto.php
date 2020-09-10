@@ -23,11 +23,18 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">Podras encontrarnos en<span class="text-muted"></span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                <h2 class="featurette-heading">DONDE NOS UBICAMOS<span class="text-muted"></span></h2>
+                <p><font size="5">HORARIOS:</font></p>
+                <p><font size="3">DE LUNES A SABADOS: 9:00 AM a 1:00PM Y DE 3:00 PM a 9:00 PM </font></p>
+                <p><font size="5">TELEFONO: </font></p>
+                <p><font size="3">310 6282554 </font></p>
+                <p><font size="5">UBICACION: </font></p>
+                <p><font size="3">Cra 3 No° 26-32 Soacha-Cundinamarca</font></p>
+               
+                
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <img src="img/papeleriaa.jpg" alt="" width="100%" height="350">
             </div>
         </div><!-- /END THE FEATURETTES -->
 
@@ -36,6 +43,9 @@
 
     </div>
         <br><br>
+
+
+        
 
 
 
