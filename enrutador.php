@@ -23,23 +23,8 @@ function llamar($clase,$funcion)
         case 'pagina':
             $control= new home();//instanciar
         break;
-        case 'cliente1':
-            $control= new cliente1();//instanciar
-        break;
         case 'login':
             $control= new login();//instanciar
-        break;
-        case 'cliente':
-            $control= new cliente2();//instanciar
-        break;
-        case 'empleado':
-            $control= new empleado1();//instanciar
-        break;
-        case 'inventario':
-            $control= new inventario1();//instanciar
-        break;
-        case 'pedido':
-            $control= new pedido1();//instanciar
         break;
         case 'provedor':
             $control= new proveedor1();//instanciar

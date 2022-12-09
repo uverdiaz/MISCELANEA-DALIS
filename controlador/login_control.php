@@ -7,7 +7,13 @@
     {
         //llama al archivo de inicio de la pagina 
         include("vista/paginas/login.php");
-    }//fin funcion principal  
+    }//fin funcion principal 
+    
+    function reporte()
+    {
+        //llama al archivo de inicio de la pagina 
+        include("vista/Testing");
+    }//fin funcion principal 
 
     function login2()
     {

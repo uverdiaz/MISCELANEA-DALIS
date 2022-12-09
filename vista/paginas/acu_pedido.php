@@ -1,6 +1,6 @@
 <head>
     <?php require_once("diseño/head.php") ?>
-    <title>Pedido</title>
+    <title>Menu principal</title>
 </head>
     <?php require_once("diseño/nav.php") ?>
     <br><br>
@@ -11,10 +11,10 @@
         <div class="contenedor-imagenes">
             <div class="imagen">
 
-                <a href="?clase=cliente1&&funcion=ppal_cliente"><img src="img/h1.png" alt="" style="height:100%;"></a>
+                <a href="vista/Testing/"><img src="img/h1.png" alt="" style="height:100%;"></a>
 
 
-                <a href="?clase=cliente1&&funcion=ppal_cliente">
+                <a href="vista/Testing/">
                     <div class="overlay1">
                         <h2>ADJUNTAR REPORTE</h2>
                     </div>
