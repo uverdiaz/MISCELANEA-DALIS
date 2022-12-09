@@ -11,13 +11,18 @@
 
     function login2()
     {
-      require 'base_datos/conexion.php';
-      session_start();
-
+      //require 'base_datos/conexion.php';
+      //session_start();
+        print("hola");
         $usuario=$_POST['username'];
         $clave=$_POST['pass'];
-
-        $q= "select count(*) as contar from EMPLEADOS where usuario='$usuario' and clave='$clave'";
+        if($usuario == "admin" && $clave == "123"){
+          //$_SESSION["username"] = $usuario;
+          include("vista/paginas/entrada.php");
+        }else{
+          include("vista/paginas/acu_pedido.php");
+        }
+        /*$q= "select count(*) as contar from EMPLEADOS where usuario='$usuario' and clave='$clave'";
         $consulta= mysqli_query($conexion,$q);
         $array = mysqli_fetch_array($consulta);
         if($array['contar']>0){
@@ -27,7 +32,7 @@
         else
         {
           include("vista/paginas/acu_pedido.php");
-        }
+        }*/
         //llama al archivo de inicio de la pagina 
     }//fin funcion papeleria
 

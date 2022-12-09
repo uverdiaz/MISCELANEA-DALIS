@@ -6,7 +6,7 @@
       {
           try
           {
-              $conexion=mysqli_connect("localhost","root","","PAPELERIA_DALIS");//servidor,usuario,clave,nom_bd
+              $conexion=mysqli_connect("192.168.64.3","root","","proyecto_bases_de_datos");//servidor,usuario,clave,nom_bd
               return $conexion;
           }//fin try
           catch(Exception $e)
